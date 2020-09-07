@@ -1,6 +1,6 @@
 # vue-travel
 
-> A Vue.js project
+> Vue 仿去哪网app
 
 ## Build Setup
 
