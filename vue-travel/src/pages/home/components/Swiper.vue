@@ -1,10 +1,7 @@
 <template>
-    <swiper ref="mySwiper" :options="swiperOptions">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
+    <swiper :options="swiperOptions">
+    <swiper-slide><img src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/0bdded1796fc19087b5f620084009277.jpg_890x330_d5f58150.jpg"></swiper-slide>
+    <swiper-slide><img src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/9dbec1a468fd5c198be3a81600b30c5c.jpg_890x330_ecf160e3.jpg"></swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
@@ -14,24 +11,8 @@ export default {
   data() {
       return {
         swiperOptions: {
-          pagination: {
-            el: '.swiper-pagination'
-          },
-          // Some Swiper option/callback...
-        }
       }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
-    },
-    mounted() {
-      console.log('Current Swiper instance object', this.swiper)
-      this.swiper.slideTo(3, 1000, false)
     }
 }
+}
 </script>
-<style scoped>
-
-</style>
