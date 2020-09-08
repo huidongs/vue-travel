@@ -1,18 +1,25 @@
 <template>
-    <swiper :options="swiperOptions">
-    <swiper-slide><img src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/0bdded1796fc19087b5f620084009277.jpg_890x330_d5f58150.jpg"></swiper-slide>
-    <swiper-slide><img src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/9dbec1a468fd5c198be3a81600b30c5c.jpg_890x330_ecf160e3.jpg"></swiper-slide>
+  <swiper :options="swiperOptions">
+    <swiper-slide>
+      <img
+        src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/0bdded1796fc19087b5f620084009277.jpg_890x330_d5f58150.jpg"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/9dbec1a468fd5c198be3a81600b30c5c.jpg_890x330_ecf160e3.jpg"
+      />
+    </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
 <script>
 export default {
   name: 'HomeSwiper',
-  data() {
-      return {
-        swiperOptions: {
-      }
+  data () {
+    return {
+      swiperOptions: {}
     }
-}
+  }
 }
 </script>
