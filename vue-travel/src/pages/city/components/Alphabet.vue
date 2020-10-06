@@ -37,6 +37,7 @@ export default {
       timer: null
     }
   },
+  // test
   updated () {
     this.startY = this.$refs['A'][0].offsetTop
   },
