@@ -1,15 +1,15 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search :cities="cities"></city-search>
+    <city-search></city-search>
     <city-list
-      :cities="cities"
-      :hot="hotCities"
-      :letter="letter"
+    :cities="cities"
+    :hot="hotCities"
+    :letter="letter"
     ></city-list>
     <city-alphabet
-      :cities="cities"
-      @change="handleLetterChange"
+    :cities="cities"
+    @change="handleLetterClick"
     ></city-alphabet>
   </div>
 </template>
@@ -37,8 +37,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
-        .then(this.handleGetCityInfoSucc)
+      axios.get('/static/mock/city.json').then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {
       res = res.data
@@ -48,7 +47,7 @@ export default {
         this.hotCities = data.hotCities
       }
     },
-    handleLetterChange (letter) {
+    handleLetterClick (letter) {
       this.letter = letter
     }
   },
