@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">南京</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </div>
@@ -17,8 +17,7 @@
           </div>
         </div>
       </div>
-      <div
-      class="area"
+      <div class="area"
       v-for="(item, key) of cities"
       :key="key"
       :ref="key">
@@ -51,8 +50,8 @@ export default {
   watch: {
     letter () {
       if (this.letter) {
-        const element = this.$refs[this.letter]
-        this.scorll.scrollToElement(element)
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
       }
     }
   }

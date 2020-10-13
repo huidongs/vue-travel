@@ -1,7 +1,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list
     :cities="cities"
     :hot="hotCities"
@@ -9,7 +9,7 @@
     ></city-list>
     <city-alphabet
     :cities="cities"
-    @change="handleLetterClick"
+    @change="handleLetterChange"
     ></city-alphabet>
   </div>
 </template>
@@ -47,7 +47,8 @@ export default {
         this.hotCities = data.hotCities
       }
     },
-    handleLetterClick (letter) {
+    handleLetterChange (letter) {
+      console.log('handleLetterChange获得:' + letter)
       this.letter = letter
     }
   },
@@ -58,5 +59,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 </style>
